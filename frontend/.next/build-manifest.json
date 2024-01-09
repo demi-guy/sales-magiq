@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/eOQn6G3J-Wx7bAPQBxjca/_buildManifest.js",
-    "static/eOQn6G3J-Wx7bAPQBxjca/_ssgManifest.js"
+    "static/0XTIUqiL7qkZyq9iNIZrm/_buildManifest.js",
+    "static/0XTIUqiL7qkZyq9iNIZrm/_ssgManifest.js"
   ],
   "rootMainFiles": [],
   "pages": {
@@ -16,7 +16,7 @@
       "static/chunks/main-7af7d5359a6145de.js",
       "static/chunks/718-79cec2090016fa44.js",
       "static/chunks/374-b73d5be6f9205362.js",
-      "static/chunks/pages/index-8a3cd9a1dbe58880.js"
+      "static/chunks/pages/index-468052cce524a2ce.js"
     ],
     "/_app": [
       "static/chunks/webpack-fa99431b15635937.js",
@@ -36,7 +36,7 @@
       "static/chunks/framework-0c7baedefba6b077.js",
       "static/chunks/main-7af7d5359a6145de.js",
       "static/chunks/718-79cec2090016fa44.js",
-      "static/chunks/157-6dee4d2195b2b548.js",
+      "static/chunks/157-63d9d128549e9357.js",
       "static/chunks/pages/job/detail/[_id]-85ca7684b769219e.js"
     ],
     "/job/hire": [
@@ -44,7 +44,7 @@
       "static/chunks/framework-0c7baedefba6b077.js",
       "static/chunks/main-7af7d5359a6145de.js",
       "static/chunks/718-79cec2090016fa44.js",
-      "static/chunks/157-6dee4d2195b2b548.js",
+      "static/chunks/157-63d9d128549e9357.js",
       "static/chunks/pages/job/hire-ccfec9355a8d0b3b.js"
     ],
     "/job/post": [
@@ -52,7 +52,7 @@
       "static/chunks/framework-0c7baedefba6b077.js",
       "static/chunks/main-7af7d5359a6145de.js",
       "static/chunks/718-79cec2090016fa44.js",
-      "static/chunks/157-6dee4d2195b2b548.js",
+      "static/chunks/157-63d9d128549e9357.js",
       "static/chunks/pages/job/post-3aa124dd6276865c.js"
     ]
   },
