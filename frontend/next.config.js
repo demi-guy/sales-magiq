@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   env: {
-    SERVER_IP: "http://localhost:5000"
+    SERVER_IP: "https://salesmagiq.onrender.com"
   }
 }
 
