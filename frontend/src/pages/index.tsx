@@ -55,10 +55,11 @@ function Sign() {
   }
 
   useEffect(() => {
-    if (!isEmpty(cookies.jwtToken)) {
-      apiFactory.test(cookies.jwtToken)
+    if (!isEmpty(cookies.jwtToken) || !isEmpty(localStorage.getItem("token"))) {
+      apiFactory.test(cookies.jwtToken || localStorage.getItem("token"))
         .then(() => {
           localStorage.setItem("token", cookies.jwtToken);
+          setCookie("jwtToken", null);
           router.push("/job/hire");
         })
         .catch(() => {
