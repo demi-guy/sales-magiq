@@ -12,8 +12,8 @@ const Header2: React.FC<Header2Props> = ({ type = "default" }) => {
                 <div className="justify-start items-center gap-6 inline-flex">
                     <AvatarHeader />
                     <div className="flex-col justify-center items-start gap-2 inline-flex">
-                        <div className="text-neutral-600 text-[32px] font-normal font-['Rubik'] capitalize">Hire</div>
-                        <div className="text-black text-opacity-50 text-xs font-normal font-['Rubik']">Lorem ipsum dolor sit amet consectetur. Tellus nulla ipsum faucibus consectetur. Felis nunc in tempor aenean purus.</div>
+                        <div className="text-neutral-600 text-[32px] capitalize">Hire</div>
+                        <div className="text-black text-opacity-50">Lorem ipsum dolor sit amet consectetur. Tellus nulla ipsum faucibus consectetur. Felis nunc in tempor aenean purus.</div>
                     </div>
                 </div>
                 <ButtonGroup />

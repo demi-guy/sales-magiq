@@ -73,7 +73,7 @@ const Button: React.FC<ButtonProps> = ({ onClick = () => { }, icon = "none", col
                     src={icon}
                 />
             }
-            {text && <div className={(color === "none" ? "text-neutral-600" : textColors[color][variant]) + " text-sm font-normal font-['Rubik'] capitalize"}>{text}</div>}
+            {text && <div className={(color === "none" ? "text-neutral-600" : textColors[color][variant]) + " text-sm capitalize"}>{text}</div>}
         </div>
     );
 }

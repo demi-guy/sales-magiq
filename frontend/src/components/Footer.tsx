@@ -10,28 +10,28 @@ export default function Footer() {
                     <div className="w-[231px] h-[29px] justify-center items-center inline-flex">
                         <Logo width={231} />
                     </div>
-                    <div className="self-stretch grow shrink basis-0 text-blue-950 text-sm font-normal font-['Rubik']">Lorem ipsum dolor sit amet consectetur. Lectus facilisi id bibendum quis consectetur egestas. </div>
+                    <div className="self-stretch grow shrink basis-0 text-blue-950 text-sm">Lorem ipsum dolor sit amet consectetur. Lectus facilisi id bibendum quis consectetur egestas. </div>
                 </div>
                 <div className="grow shrink basis-0 flex-col justify-start items-start gap-2.5 inline-flex">
-                    <div className="text-indigo-900 text-lg font-medium font-['Rubik']">Bussiness</div>
-                    <div className="text-neutral-600 text-base font-normal font-['Rubik']">Hire</div>
-                    <div className="text-neutral-600 text-base font-normal font-['Rubik']">Training</div>
-                    <div className="text-neutral-600 text-base font-normal font-['Rubik']">Scaling</div>
+                    <div className="text-indigo-900 text-lg font-medium">Bussiness</div>
+                    <div className="text-neutral-600 text-base">Hire</div>
+                    <div className="text-neutral-600 text-base">Training</div>
+                    <div className="text-neutral-600 text-base">Scaling</div>
                 </div>
                 <div className="grow shrink basis-0 flex-col justify-start items-start gap-2.5 inline-flex">
-                    <div className="text-indigo-900 text-lg font-medium font-['Rubik']">Bussiness</div>
-                    <div className="text-neutral-600 text-base font-normal font-['Rubik']">Hire</div>
-                    <div className="text-neutral-600 text-base font-normal font-['Rubik']">Training</div>
-                    <div className="text-neutral-600 text-base font-normal font-['Rubik']">Scaling</div>
+                    <div className="text-indigo-900 text-lg font-medium">Bussiness</div>
+                    <div className="text-neutral-600 text-base">Hire</div>
+                    <div className="text-neutral-600 text-base">Training</div>
+                    <div className="text-neutral-600 text-base">Scaling</div>
                 </div>
                 <div className="grow shrink basis-0 flex-col justify-start items-start gap-2.5 inline-flex">
-                    <div className="text-indigo-900 text-lg font-medium font-['Rubik']">Bussiness</div>
-                    <div className="text-neutral-600 text-base font-normal font-['Rubik']">Hire</div>
-                    <div className="text-neutral-600 text-base font-normal font-['Rubik']">Training</div>
-                    <div className="text-neutral-600 text-base font-normal font-['Rubik']">Scaling</div>
+                    <div className="text-indigo-900 text-lg font-medium">Bussiness</div>
+                    <div className="text-neutral-600 text-base">Hire</div>
+                    <div className="text-neutral-600 text-base">Training</div>
+                    <div className="text-neutral-600 text-base">Scaling</div>
                 </div>
                 <div className="grow shrink basis-0 flex-col justify-start items-start gap-2.5 inline-flex">
-                    <div className="text-indigo-900 text-lg font-medium font-['Rubik']">Fllow Us</div>
+                    <div className="text-indigo-900 text-lg font-medium">Fllow Us</div>
                     <div className="justify-start items-start gap-4 inline-flex">
                         <Image className="hover:cursor-pointer" alt="Icon Image" width={24} height={24} src="/icons/entypo-social_twitter-with-circle.svg" />
                         <Image className="hover:cursor-pointer" alt="Icon Image" width={24} height={24} src="/icons/entypo-social_youtube-with-circle.svg" />
@@ -41,7 +41,7 @@ export default function Footer() {
                 </div>
             </div>
             <div className="self-stretch justify-center items-start gap-2.5 inline-flex">
-                <div><span className="text-neutral-600 text-sm font-normal font-['Rubik']">Copyright © All rights reserved by </span><Link href="" className="text-blue-500 text-sm font-normal font-['Rubik'] underline">Salesmagiq</Link></div>
+                <div><span className="text-neutral-600 text-sm">Copyright © All rights reserved by </span><Link href="" className="text-blue-500 text-sm underline">Salesmagiq</Link></div>
             </div>
         </div>
     </div>

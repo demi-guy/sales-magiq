@@ -57,7 +57,7 @@ function Hire() {
                                     <Book />
                                 </div>
                             </div>
-                            <div className="text-neutral-600 text-base font-normal font-['Rubik']">My All Jobs</div>
+                            <div className="text-neutral-600 text-base">My All Jobs</div>
                             <div />
                             <div className="grow shrink basis-0 h-8 justify-end items-start gap-2.5 flex">
                                 <Input type="search" placeholder="Search" width="[141px]" value={search} onChange={(value) => setSearch(value)} />

@@ -14,7 +14,7 @@ const ItemJob: React.FC<ItemJobProps> = ({ title = "", description = "", price =
             <div className="grow shrink basis-0 flex-col justify-start items-start gap-[5px] inline-flex">
                 <div className="self-stretch justify-start items-center gap-6 inline-flex">
                     <div className="grow shrink basis-0 h-6 justify-between items-center flex">
-                        <div className="grow shrink basis-0 text-neutral-600 text-xl font-normal font-['Rubik']">{title}</div>
+                        <div className="grow shrink basis-0 text-neutral-600 text-xl">{title}</div>
                     </div>
                     <div className="justify-start items-start gap-2 flex">
                         <div className="justify-start items-center gap-2 flex">
@@ -23,7 +23,7 @@ const ItemJob: React.FC<ItemJobProps> = ({ title = "", description = "", price =
                                 height={18}
                             />
                             <div className="px-4 py-0.5 bg-zinc-400 rounded-2xl justify-center items-center gap-2.5 flex">
-                                <div className="text-white text-xs font-normal font-['Rubik']">{price}</div>
+                                <div className="text-white">{price}</div>
                             </div>
                         </div>
                     </div>
@@ -35,7 +35,7 @@ const ItemJob: React.FC<ItemJobProps> = ({ title = "", description = "", price =
                             height={18}
                         />
                     </div>
-                    <div className="grow shrink basis-0 text-zinc-400 text-xs font-light font-['Rubik']">{description}</div>
+                    <div className="h-[50px] overflow-hidden grow shrink basis-0 text-zinc-400 font-light">{description}</div>
                 </div>
             </div>
         </div>

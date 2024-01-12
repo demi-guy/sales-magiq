@@ -12,7 +12,7 @@ const BreadCrumbItem: React.FC<BreadCrumbItemProps> = ({ icon = false, selected 
     return (
         <div className="w-100% h-[17px] pr-3 justify-start items-center gap-3 inline-flex transition-all">
             {icon && <HomeSimpleDoor className="pr-0 gap-0" color="#B3B3B3" />}
-            <div className={`${!selected ? "text-zinc-400" : "text-neutral-600"} text-sm font-normal font-['Rubik'] hover:cursor-pointer`} onClick={onClick}>{text}</div>
+            <div className={`${!selected ? "text-zinc-400" : "text-neutral-600"} text-sm hover:cursor-pointer`} onClick={onClick}>{text}</div>
             {!selected && <Image
                 width={6}
                 height={6}

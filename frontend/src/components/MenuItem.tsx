@@ -20,7 +20,7 @@ const MenuItem: React.FC<MenuItemProps> = ({ selected = false, device = "landsca
                                 alt="Menu Item Image"
                                 src={selected ? icon.replace(".svg", "-selected.svg") : icon}
                             />
-                            <div className={`text-${selected ? "blue-950" : "neutral-600"} text-xl font-normal font-['Rubik']`}>{text}</div>
+                            <div className={`text-${selected ? "blue-950" : "neutral-600"} text-xl`}>{text}</div>
                         </div>
                         {selected && <Image
                             width={21}
@@ -38,7 +38,7 @@ const MenuItem: React.FC<MenuItemProps> = ({ selected = false, device = "landsca
                         alt="Menu Item Image"
                         src={icon}
                     />
-                    <div className={`text-${selected ? "sky-700" : "neutral-600"} text-xs font-normal font-['Rubik']`}>{text}</div>
+                    <div className={`text-${selected ? "sky-700" : "neutral-600"}`}>{text}</div>
                 </div>
             )}
         </>

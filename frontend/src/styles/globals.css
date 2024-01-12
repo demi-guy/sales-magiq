@@ -21,4 +21,8 @@ body {
   background: linear-gradient(to bottom,
       transparent,
       rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  font-family: 'Rubik';
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 400;
 }

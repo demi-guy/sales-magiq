@@ -69,10 +69,10 @@ const Input: React.FC<InputProps> = ({ value = "", onChange = () => { }, type = 
                     alt={altText[type]}
                 />
             )}
-            {(typeText[type] === "file" || type === "date") && <div id={type === "date" ? "color-calendar" : undefined} className="w-[100%] px-6 text-neutral-600 text-sm font-normal font-['Rubik'] absolute">{value ? value : <div className="text-zinc-400">{placeholder || placeholderText[type]}</div>}</div>}
+            {(typeText[type] === "file" || type === "date") && <div id={type === "date" ? "color-calendar" : undefined} className="w-[100%] px-6 text-neutral-600 text-sm absolute">{value ? value : <div className="text-zinc-400">{placeholder || placeholderText[type]}</div>}</div>}
             <input
                 ref={ref}
-                className={`w-[100%] text-neutral-600 text-sm font-normal font-['Rubik'] outline-none ${type === "default" || type === "search" || type === "password" ? "opacity-1 z-0" : "opacity-0 z-0"}`}
+                className={`w-[100%] text-neutral-600 text-sm outline-none ${type === "default" || type === "search" || type === "password" ? "opacity-1 z-0" : "opacity-0 z-0"}`}
                 placeholder={placeholder || placeholderText[type]}
                 type={(typeText[type] === "password" && showPassword) ? "text" : typeText[type]}
                 value={value}

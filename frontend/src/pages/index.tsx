@@ -56,7 +56,11 @@ function Sign() {
 
   useEffect(() => {
     if (!isEmpty(cookies.jwtToken) || !isEmpty(localStorage.getItem("token"))) {
-      apiFactory.test(cookies.jwtToken || localStorage.getItem("token"))
+      let token = cookies.jwtToken;
+      if (isEmpty(token)) {
+        token = localStorage.getItem("token");
+      }
+      apiFactory.test(token)
         .then(() => {
           localStorage.setItem("token", cookies.jwtToken);
           setCookie("jwtToken", null);
@@ -64,6 +68,7 @@ function Sign() {
         })
         .catch(() => {
           setCookie("jwtToken", null);
+          console.log("token remove");
           localStorage.removeItem("token");
         });
     }
@@ -85,23 +90,23 @@ function Sign() {
               <Logo />
             </div>
             <div className="flex-col justify-start items-center gap-1 flex">
-              <div className="text-sky-700 text-base font-semibold font-['Rubik']">{type ? "Welcome to back" : "Create an account"}</div>
-              <div className="text-zinc-400 text-[10px] font-normal font-['Rubik']">{type ? "Sign in to continue" : "Create a new account"}</div>
+              <div className="text-sky-700 text-base font-semibold">{type ? "Welcome to back" : "Create an account"}</div>
+              <div className="text-zinc-400 text-[10px]">{type ? "Sign in to continue" : "Create a new account"}</div>
             </div>
             <div className="self-stretch h-[136px] flex-col justify-start items-center gap-[18px] flex">
               <div className="self-stretch h-[59px] flex-col justify-start items-start gap-2.5 flex">
-                <div className="text-neutral-600 text-sm font-normal font-['Rubik']">Email Address</div>
+                <div className="text-neutral-600 text-sm">Email Address</div>
                 <Input type="search" onChange={(value) => setEmail(value)} value={email} />
               </div>
               <div className="self-stretch h-[59px] flex-col justify-start items-start gap-2.5 flex">
-                <div className="text-neutral-600 text-sm font-normal font-['Rubik']">User Password</div>
+                <div className="text-neutral-600 text-sm">User Password</div>
                 <Input type="password" onChange={(value) => setPassword(value)} value={password} />
               </div>
             </div>
             <Button text={type ? "Login" : "Sign Up"} color="primary" onClick={type ? onSignIn : onSignUp} />
             <div className="self-stretch justify-start items-center gap-3 inline-flex">
               <div className="grow shrink basis-0 h-[0px] border border-zinc-400"></div>
-              <div className="text-zinc-400 text-sm font-normal font-['Rubik']">or</div>
+              <div className="text-zinc-400 text-sm">or</div>
               <div className="grow shrink basis-0 h-[0px] border border-zinc-400"></div>
             </div>
             <div className="self-stretch h-[76px] flex-col justify-start items-start gap-3 flex">
@@ -112,14 +117,14 @@ function Sign() {
                   alt="Button Image"
                   src="/icons/google-icon.svg"
                 />
-                <div className="text-indigo-900 text-sm font-normal font-['Rubik'] capitalize" >Google</div>
+                <div className="text-indigo-900 text-sm capitalize" >Google</div>
               </a>
               <Button icon="/icons/facebook.svg" text="Facebook" variant="outlined" color="primary" />
             </div>
             <div className="justify-center items-start gap-1 inline-flex">
-              <div className="text-neutral-600 text-sm font-normal font-['Rubik']">{type ? "Don’t have an account?" : "Already have an account?"}</div>
+              <div className="text-neutral-600 text-sm">{type ? "Don’t have an account?" : "Already have an account?"}</div>
               <div className="justify-center items-center gap-2.5 flex">
-                <Link className="text-blue-500 text-sm font-medium font-['Rubik'] underline" href="/" onClick={() => setType(!type)}>{type ? "Sign up" : "Log in"}</Link>
+                <Link className="text-blue-500 text-sm font-medium underline" href="/" onClick={() => setType(!type)}>{type ? "Sign up" : "Log in"}</Link>
               </div>
             </div>
           </div>
