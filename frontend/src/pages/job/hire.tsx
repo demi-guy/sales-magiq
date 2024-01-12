@@ -16,19 +16,24 @@ import Select from "@/components/Select";
 import ItemJob from "@/components/ItemJob";
 import Pagination from "@/components/Pagination";
 import apiFactory from "@/helper/apiFactory";
+import { useCookies } from "react-cookie";
 
 function Hire() {
     const [data, setData] = useState([]);
     const [page, setPage] = useState(0);
     const [search, setSearch] = useState("");
     const [selected, setSelected] = useState("");
+    const [cookies, setCookie] = useCookies(['jwtToken']);
     const router = useRouter();
     useEffect(() => {
-        if (isEmpty(localStorage.getItem("token"))) {
+        if (isEmpty(cookies.jwtToken) && isEmpty(localStorage.getItem("token"))) {
             router.push("/");
+            setCookie("jwtToken", null);
         } else {
-            apiFactory.readJobs(localStorage.getItem("token"), page, search, selected)
+            let token = cookies.jwtToken || localStorage.getItem("token")
+            apiFactory.readJobs(token, page, search, selected)
                 .then(res => {
+                    localStorage.setItem("token", token);
                     setData(res.data.data);
                 }).catch(error => toast.error(apiFactory.getError(error, router)));
         }

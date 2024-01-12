@@ -3,7 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import { useCookies } from "react-cookie";
 import { toast } from 'react-toastify';
 import isEmpty from "is-empty";
 import isEmail from "validator/lib/isEmail";
@@ -15,7 +14,6 @@ import StringConstant from "@/constants";
 
 function Sign() {
   const router = useRouter();
-  const [cookies, setCookie] = useCookies(['jwtToken']);
 
   const [type, setType] = useState(true); // type = false -> sign in page, true -> sign up
   const [password, setPassword] = useState("");
@@ -55,19 +53,12 @@ function Sign() {
   }
 
   useEffect(() => {
-    if (!isEmpty(cookies.jwtToken) || !isEmpty(localStorage.getItem("token"))) {
-      let token = cookies.jwtToken;
-      if (isEmpty(token)) {
-        token = localStorage.getItem("token");
-      }
-      apiFactory.test(token)
+    if (!isEmpty(localStorage.getItem("token"))) {
+      apiFactory.test(localStorage.getItem("token"))
         .then(() => {
-          localStorage.setItem("token", cookies.jwtToken);
-          setCookie("jwtToken", null);
           router.push("/job/hire");
         })
         .catch(() => {
-          setCookie("jwtToken", null);
           console.log("token remove");
           localStorage.removeItem("token");
         });
