@@ -26,14 +26,18 @@ function Hire() {
     const [cookies, setCookie] = useCookies(['jwtToken']);
     const router = useRouter();
     useEffect(() => {
-        if (isEmpty(cookies.jwtToken) && isEmpty(localStorage.getItem("token"))) {
+        let { token } = router.query;
+        if (!isEmpty(cookies.jwtToken) || !isEmpty(token)) {
+            localStorage.setItem("token", token || cookies.jwtToken);
+            router.push("/job/hire");
+        }
+        if (isEmpty(localStorage.getItem("token"))) {
             router.push("/");
             setCookie("jwtToken", null);
         } else {
-            let token = cookies.jwtToken || localStorage.getItem("token")
+            let token = localStorage.getItem("token")
             apiFactory.readJobs(token, page, search, selected)
                 .then(res => {
-                    localStorage.setItem("token", token);
                     setData(res.data.data);
                 }).catch(error => toast.error(apiFactory.getError(error, router)));
         }
