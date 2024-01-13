@@ -31,15 +31,15 @@ function Hire() {
             localStorage.setItem("token", token || cookies.jwtToken);
             router.push("/job/hire");
         }
-        if (isEmpty(localStorage.getItem("token"))) {
-            router.push("/");
-            setCookie("jwtToken", null);
-        } else {
+        else if (!isEmpty(localStorage.getItem("token"))) {
             let token = localStorage.getItem("token")
             apiFactory.readJobs(token, page, search, selected)
                 .then(res => {
                     setData(res.data.data);
                 }).catch(error => toast.error(apiFactory.getError(error, router)));
+        } else {
+            router.push("/");
+            setCookie("jwtToken", null);
         }
     }, [search, page, selected]);
 
