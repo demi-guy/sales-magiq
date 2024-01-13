@@ -17,7 +17,8 @@ module.exports = {
     },
     googleCallback: async (req, res) => {
         const token = generateAccessToken(req.user);
-        res.cookie('jwtToken', token);
+        // res.cookie('jwtToken', token);
         res.redirect(`${process.env.CLIENT_IP}/job/hire?token=${token}`);
+        // res.send(200);
     }
 }
